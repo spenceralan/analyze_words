@@ -10,13 +10,13 @@ class Palindrome
     input
   end
 
-  def is_anagram?(word1, word2)
-    word1 = clean_up_input(word1)
-    word2 = clean_up_input(word2)
+  def is_anagram?(phrase1, phrase2)
+    phrase1 = clean_up_input(phrase1)
+    phrase2 = clean_up_input(phrase2)
 
-    return false if word1 == word2
+    return false if phrase1 == phrase2
     
-    word1.chars.sort == word2.chars.sort
+    phrase1.chars.sort == phrase2.chars.sort
   end
   
   def is_palindrome?(phrase)
@@ -27,14 +27,14 @@ class Palindrome
     phrase.reverse == phrase
   end
 
-  def is_antigram?(word1, word2)
-    word1 = clean_up_input(word1)
-    word2 = clean_up_input(word2)
+  def is_antigram?(phrase1, phrase2)
+    phrase1 = clean_up_input(phrase1)
+    phrase2 = clean_up_input(phrase2)
 
-    return false if word1 == "" || word2 == ""
+    return false if phrase1 == "" || phrase2 == ""
     
-    word2.each_char do |letter|
-      return false if word1.chars.include?(letter)
+    phrase2.each_char do |letter|
+      return false if phrase1.chars.include?(letter)
     end
     return true
   end
