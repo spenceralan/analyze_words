@@ -18,5 +18,10 @@ class Palindrome
     word1.chars.sort == word2.chars.sort
   end
   
-
+  def is_palindrome?(phrase)
+    phrase = clean_up_input(phrase)
+    return false if phrase == ""
+    phrase.reverse == phrase
+  end
+  
 end

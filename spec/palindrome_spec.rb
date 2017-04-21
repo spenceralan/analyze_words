@@ -60,8 +60,33 @@ describe 'Palindrome#is_anagram?' do
     expect(word.is_anagram?("DRAW", "ward!")).to eq true
   end
 
-    it "returns true if the sentence is an anagram" do
+  it "returns true if the sentence is an anagram" do
     expect(word.is_anagram?("dormitory", "dirty room!")).to eq true
+  end
+
+  it "returns false for a word with the same letters forward and backward" do
+    expect(word.is_anagram?("Madam?", "Madam!")).to eq false
+  end
+
+end
+
+describe 'Palindrome#is_palindrome?' do
+  let(:word) { Palindrome.new }
+
+  it "returns false if the word is not a palindrome" do
+    expect(word.is_palindrome?("ward")).to eq false
+  end
+
+  it "returns true if the sentence is an palindrome" do
+    expect(word.is_palindrome?("A man, a plan, a canal, Panama!")).to eq true
+  end
+
+  it "returns true for a word with the same letters forward and backward" do
+    expect(word.is_palindrome?("Madam?")).to eq true
+  end
+
+  it "returns false for an empty string" do
+    expect(word.is_palindrome?("")).to eq false
   end
 
 end
