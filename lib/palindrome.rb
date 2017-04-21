@@ -5,9 +5,9 @@ class Palindrome
   end
 
   def clean_up_input(input)
-    input.downcase!
-    input.gsub!(/[^[:alpha:]]/, "")
-    input
+    output = input.downcase
+    output.gsub!(/[^[:alpha:]]/, "")
+    output
   end
 
   def is_anagram?(phrase1, phrase2)
