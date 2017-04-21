@@ -18,8 +18,6 @@ Installation is quick and easy! First you can open this link https://stormy-bast
 
 * Ruby
 * Sinatra
-* JavaScript
-* jQuery https://jquery.com/
 * HTML
 * CSS
 * Bootstrap https://getbootstrap.com/
