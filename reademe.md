@@ -1,14 +1,6 @@
-# DinnerMatch.com - Week 5 Group Project - Epicodus
+# Palindrome, Anagram, Antigram OH MY!
 
-This web app will allow a user to select from a predetermined list of ingredients they might have on hand to return a list of recipes that include those ingredients. This app helps users think of recipes they may not know they could easily make with what is already in their fridge or pantry. This app will reduce food waste and helps the user to save money by limiting the amount of ingredients they need to purchase. This makes the world a better place.
-
-This webpage was built using HTML, CSS, Bootstrap, JavaScript, jQuery, and icons from Font Awesome.
-
-## Getting Started
-
-
-
-There are at least two ways of accessing the website. First and easiest is to follow the link INSERT_HEROKU_LINK_HERE. Second is to clone this repository onto your machine and open the index.html file in your web browser.
+This web app will tell you if the words you input are anagrams, palindromes, or antigrams! Clearly you need this app in your life. This will make the world a better place!
 
 ### Prerequisites
 
@@ -16,10 +8,11 @@ Web browser with ES6 compatibility
 Examples: Chrome, Safari
 
 Ruby 2.4.1
+Bundler
 
 ### Installing
 
-Installation is quick and easy! First you can open this link INSERT_HEROKU_LINK_HERE to see the webpage in action live online. Or you can clone this repository to your machine, navigate to the file path in your terminal, and run 'app.rb' by typing '$ruby app.rb'. If you chose to clone the repository, after you run 'app.rb' you will need to copy the localhost path into your web browswer. 
+Installation is quick and easy! First you can open this link https://stormy-bastion-48587.herokuapp.com/ to see the webpage in action live online. Or you can clone this repository to your machine, navigate to the file path in your terminal, and run 'app.rb' by typing '$ruby app.rb'. If you chose to clone the repository, after you run 'app.rb' you will need to copy the localhost path into your web browswer. 
 
 ## Built With
 
@@ -35,8 +28,13 @@ Installation is quick and easy! First you can open this link INSERT_HEROKU_LINK_
 
 | behavior |  input   |  output  |
 |----------|:--------:|:--------:|
-
-
+| downcase user input | HELLO | hello |
+| whitespace and sybols will be stripped out of user input | h$llo | hllo |
+| check to see if word is a valid word (has vowel) | GTTR | invalid |
+| check to see if words are anagrams | 'sublime' 'limb use' | this is an anagram! |
+| check to see if words are palindromes | 'civic' 'civic' | this is a palindrome! |
+| check to see if words are antigrams | 'hello' 'baby' | this is an antigram! |
+ 
 ## Authors
 
 * **Spencer A Ruiz**
