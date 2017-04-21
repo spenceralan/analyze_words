@@ -9,7 +9,8 @@ class Palindrome
   end
 
   def is_anagram?(word1, word2)
-
+    return false if word1 == word2
+    word1.chars.sort == word2.chars.sort
   end
   
 

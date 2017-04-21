@@ -3,7 +3,7 @@ require "rspec"
 require "pry"
 
 
-describe 'palindrome#isWord?' do
+describe 'Palindrome#isWord?' do
   let(:word) { Palindrome.new }
 
   it "returns true if the word has at least one vowel" do
@@ -16,7 +16,7 @@ describe 'palindrome#isWord?' do
 
 end
 
-describe 'palindrome#clean_up_input' do
+describe 'Palindrome#clean_up_input' do
   let(:word) { Palindrome.new }
 
   it "downcases and removes white space and symbols from 'Hello World!" do
@@ -37,11 +37,19 @@ describe 'palindrome#clean_up_input' do
 
 end
 
-describe 'palindrome#is_anagram?' do
+describe 'Palindrome#is_anagram?' do
   let(:word) { Palindrome.new }
 
-  xit "returns true if the word pair is an anagram" do
+  it "returns true if the word pair is an anagram" do
     expect(word.is_anagram?("ward", "draw")).to eq true
+  end
+
+  it "returns false if the word pair is the same word" do
+    expect(word.is_anagram?("ward", "ward")).to eq false
+  end
+
+  it "returns false if the word pair is the same word" do
+    expect(word.is_anagram?("ward", "ward")).to eq false
   end
 
 end
