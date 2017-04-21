@@ -90,3 +90,28 @@ describe 'Palindrome#is_palindrome?' do
   end
 
 end
+
+describe 'Palindrome#is_antigram?' do
+  let(:word) { Palindrome.new }
+
+  it "returns false if the words are not an antirgram" do
+    expect(word.is_antigram?("ward", "draw")).to eq false
+  end
+
+  it "returns true if the words are antirgrams" do
+    expect(word.is_antigram?("good", "bye")).to eq true
+  end
+
+  it "returns false if of the the inputs is not a word" do
+    expect(word.is_antigram?("###", "bye")).to eq false
+  end
+
+  it "returns false if either of the the inputs is an empty string" do
+    expect(word.is_antigram?("", "bye")).to eq false
+  end
+
+  it "returns true if the phrases are antigrams" do
+    expect(word.is_antigram?("holy cow", "batman")).to eq true
+  end
+
+end
