@@ -52,4 +52,16 @@ describe 'Palindrome#is_anagram?' do
     expect(word.is_anagram?("ward", "ward")).to eq false
   end
 
+  it "returns false if the word pair is the same word regardless of symbols and case" do
+    expect(word.is_anagram?("WARD", "ward!")).to eq false
+  end
+
+  it "returns true if the word pair is an anagram regardless of symbols and case" do
+    expect(word.is_anagram?("DRAW", "ward!")).to eq true
+  end
+
+    it "returns true if the sentence is an anagram" do
+    expect(word.is_anagram?("dormitory", "dirty room!")).to eq true
+  end
+
 end
