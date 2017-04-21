@@ -19,8 +19,20 @@ end
 describe 'palindrome#clean_up_input' do
   let(:word) { Palindrome.new }
 
-  it "downcases and removes white space and removes symbols from 'Hello World!" do
+  it "downcases and removes white space and symbols from 'Hello World!" do
     expect(word.clean_up_input("Hello World!")).to eq "helloworld"
+  end
+
+  it "downcases and removes dashes and symbols from 'Hello World!" do
+    expect(word.clean_up_input("this-is-separated!")).to eq "thisisseparated"
+  end
+
+  it "returns an empty string if there are only special characters" do
+    expect(word.clean_up_input("!!!}345678/////?????$$%%%^")).to eq ""
+  end
+
+  it "returns an empty string if there is only whitespace" do
+    expect(word.clean_up_input("      ")).to eq ""
   end
 
 end
